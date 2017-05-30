@@ -1,0 +1,106 @@
+package com.company;
+
+public class Main {
+
+    // summary of operators: http://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html
+    // http://cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html
+
+    public static void main(String[] args) {
+        int result = 1 + 2;
+        System.out.println("1 + 2 = " + result);
+
+        int previousResult = result;
+        result = result - 1;
+        System.out.println(previousResult + " - 1 = " + result);
+
+        previousResult = result;
+        result = result * 10;
+        System.out.println(previousResult + " * 10 = " + result);
+
+        previousResult = result;
+        result = result / 5;
+        System.out.println(previousResult + " / 5 = " + result);
+
+        previousResult = result;
+        result = result % 3;
+        System.out.println(previousResult + " % 3 = " + result);
+
+        previousResult = result;
+        result = result + 1;
+        System.out.println("Result is now: " + result);
+        result++;
+        System.out.println("Result is now: " + result);
+        result--;
+        System.out.println("Result is now: " + result);
+        result += 2;
+        System.out.println("Result is now: " + result);
+        result *= 10;
+        System.out.println("Result is now: " + result);
+        result -= 10;
+        System.out.println("Result is now: " + result);
+        result /= 10;
+        System.out.println("Result is now: " + result);
+
+        boolean isAlien = false;
+        if (isAlien == true) {
+            System.out.println("It's not an alien.");
+        }
+
+        int topScore = 80;
+        if (topScore != 100) {
+            System.out.println("You got the high score!");
+        }
+
+        if (topScore >= 100) {
+            System.out.println("You got the high score! Yaaaay!!");
+        }
+
+        int secondTopScore = 95;
+        if ((topScore > secondTopScore) && (topScore < 100)) {
+            System.out.println("Greater than second top score and less than 100.");
+        }
+
+        if ((topScore > 90) || (secondTopScore <= 90)) {
+            System.out.println("One of these tests is true");
+        }
+
+        int newValue = 50;
+        if (newValue == 50) {
+            System.out.println("This is true.");
+        }
+
+        boolean isCar = false;
+        if (isCar) {
+            System.out.println("This is not supposed to happen.");
+        }
+
+        isCar = true;
+        // if car is true then assign wasCar to true, otherwise assign it false
+        boolean wasCar = isCar ? true : false;
+        if (wasCar) {
+            System.out.println("wasCar is true.");
+        }
+
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("TASK 4");
+        System.out.println("-----------------------------------------------------------");
+
+        // 1. Create a double variable of value 20.
+        // 2. Create another double variable of value 80.
+        // 3. Add both numbers up and multiply by 25.
+        // 4. Use the remainder operator to get the remainder from the sum of #3 divided by 40.
+        // 5. Write an 'if' statement that displays a message "Total was over the limit"
+        //    if the remaining total (#4) is equal to 20 or less.
+
+        double value20 = 20d;
+        double value80 = 80d;
+        double multi20and80 = (value20 + value80) * 25;
+        System.out.println("(20 + 80) * 25 = " + multi20and80);
+        double remainder = multi20and80 % 40;
+        System.out.println(multi20and80 + " % 40 = " + remainder);
+
+        if (remainder <= 20) {
+            System.out.println("Total was over the limit");
+        }
+    }
+}
