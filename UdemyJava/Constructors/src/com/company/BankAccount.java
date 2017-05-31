@@ -96,7 +96,7 @@ public class BankAccount {
             System.out.println("Insufficient funds. The highest amount" +
                     " you can withdraw is " + this.balance);
         } else {
-            balance -= amount;
+            this.balance -= amount;
         }
     }
 }
