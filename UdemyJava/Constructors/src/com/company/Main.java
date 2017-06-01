@@ -80,5 +80,35 @@ public class Main {
         System.out.println("Customer name: " + kali.getCustomerName());
         System.out.println("Customer account number: " + kali.getAccountNumber());
 
+        System.out.println("----------------------------------------------------------");
+
+        BankAccount myAcc = new BankAccount("Ren", "myemail@email.com", "(059) 4321 43432");
+        System.out.println(myAcc.getAccountNumber() + " customer name " + myAcc.getCustomerName());
+
+        System.out.println("----------------------------------------------------------");
+        System.out.println("TESTING EMPTY CONSTRUCTOR");
+        System.out.println("----------------------------------------------------------");
+
+        VipCustomer vipCustomer = new VipCustomer();
+        System.out.println(vipCustomer.getName());
+        System.out.println(vipCustomer.getCreditLimit());
+        System.out.println(vipCustomer.getEmailAddress());
+
+        System.out.println("----------------------------------------------------------");
+        System.out.println("TESTING CONSTRUCTOR WITH 2 PARAMETERS (name, creditLimit)");
+        System.out.println("----------------------------------------------------------");
+
+        VipCustomer newVip = new VipCustomer("Reni", 1500);
+        System.out.println(newVip.getName() + ", " + newVip.getCreditLimit() + ", " + newVip.getEmailAddress());
+
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("TESTING CONSTRUCTOR WITH 3 PARAMETERS (name, creditLimit, emailAddress)");
+        System.out.println("-----------------------------------------------------------------------");
+
+        VipCustomer newVipPerson = new VipCustomer("Kali", 5000, "kali@something.com");
+        System.out.println(newVipPerson.getName());
+        System.out.println(newVipPerson.getCreditLimit());
+        System.out.println(newVipPerson.getEmailAddress());
+
     }
 }
