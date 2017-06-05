@@ -19,6 +19,10 @@ public class Furniture {
         this.desk = desk;
     }
 
+    public void insertFurniture(String furniture) {
+        System.out.println("Adding " + furniture + " to the room.");
+    }
+
     public boolean isCouch() {
         return couch;
     }

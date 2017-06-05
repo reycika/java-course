@@ -17,6 +17,11 @@ public class Room {
         this.balcony = balcony;
     }
 
+    public void insertToRoom(String furnitureItem) {
+        furniture.insertFurniture(furnitureItem);
+        System.out.println("insertToRoom() called without getters.");
+    }
+
     public int getSize() {
         return size;
     }
