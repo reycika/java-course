@@ -28,6 +28,7 @@ public class Hamburger {
         this.onion = onion;
         this.chilli = chilli;
         this.sauce = sauce;
+        this.numberOfAdditions = 0;
         this.additionPrice = 0;
 
         AdditionsPrice additionsPrice = new AdditionsPrice();
