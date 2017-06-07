@@ -36,7 +36,7 @@ public class Main {
 
         DeluxeHamburgerBread deluxeHamburgerBread = new DeluxeHamburgerBread(false, true, false);
 
-        DeluxeHamburgerMeat deluxeHamburgerMeat = new DeluxeHamburgerMeat(true, false, false, false);
+        DeluxeHamburgerMeat deluxeHamburgerMeat = new DeluxeHamburgerMeat(true, true, false, false);
 
         DeluxeHamburger deluxeHamburger = new DeluxeHamburger(deluxeHamburgerMeat, deluxeHamburgerBread);
         deluxeHamburger.createDeluxeHamburger();

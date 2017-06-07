@@ -1,30 +1,18 @@
 package com.company;
 
-public class HealthyHamburgerAdditions {
+public class HealthyHamburgerAdditions extends HamburgerAdditions {
 
-    private boolean lettuce;
-    private boolean tomato;
-    private boolean pickles;
-    private boolean carrot;
-    private boolean onion;
-    private boolean chilli;
-    private boolean sauce;
     private double healthyHamburgerPrice;
 
     public HealthyHamburgerAdditions(boolean lettuce, boolean tomato, boolean pickles,
                                      boolean carrot, boolean onion, boolean chilli, boolean sauce) {
-        this.lettuce = lettuce;
-        this.tomato = tomato;
-        this.pickles = pickles;
-        this.carrot = carrot;
-        this.onion = onion;
-        this.chilli = chilli;
-        this.sauce = sauce;
-        this.healthyHamburgerPrice = 4.0;
+        super(lettuce, tomato, pickles, carrot, onion, chilli, sauce);
+        this.healthyHamburgerPrice = 6.0;
     }
 
     HealthyHamburgerAdditionsPrice additionsPrice = new HealthyHamburgerAdditionsPrice();
 
+    @Override
     public void choose() {
         int itemsSelected = 0;
         double additionPriceTotal = 0.0;
@@ -90,34 +78,6 @@ public class HealthyHamburgerAdditions {
             System.out.println("-----------------------------------");
             System.out.println("TOTAL: " + total);
         }
-    }
-
-    public boolean isLettuce() {
-        return lettuce;
-    }
-
-    public boolean isTomato() {
-        return tomato;
-    }
-
-    public boolean isPickles() {
-        return pickles;
-    }
-
-    public boolean isCarrot() {
-        return carrot;
-    }
-
-    public boolean isOnion() {
-        return onion;
-    }
-
-    public boolean isChilli() {
-        return chilli;
-    }
-
-    public boolean isSauce() {
-        return sauce;
     }
 
     public double getHealthyHamburgerPrice() {
